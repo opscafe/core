@@ -1,9 +1,9 @@
 ### Source Code
 
-The [replace_cookbook source](https://github.com/replace_username/replace_repo)
+The [cafe-core source](https://github.com/opscafe/core)
 is hosted on GitHub.
 To clone the project run
 
 ```bash
-$ git clone https://github.com/replace_username/replace_repo.git
+$ git clone https://github.com/opscafe/core.git
 ```
