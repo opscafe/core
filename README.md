@@ -30,6 +30,8 @@ or integrate seamlessly with other `cafe-*` cookbooks.
 * logrotate (~> 1.9.1)
 * ntp (~> 1.8.6)
 * openssh (~> 1.4.0)
+* sudo (~> 2.7.1)
+* users (~> 1.8.2)
 * zsh (~> 1.0.1)
 * vim (~> 1.1.2)
 
@@ -46,7 +48,7 @@ Attribute | Description | Default | Choices
 * [cafe-core::default](#cafe-coredefault) - Installs and configures core services.
 * [cafe-core::common](#cafe-corecommon) - Configures smart defaults.
 * [cafe-core::ssh](#cafe-coressh) - Configures an ssh server.
-* cafe-core::sudo - Configures and enables sudo.
+* [cafe-core::sudo](#cafe-coresudo) - Configures and enables sudo.
 
 ### cafe-core::default
 
@@ -75,9 +77,15 @@ Also includes the `apt::default` recipe on Debian based platforms.
 Installs and enables the openssh server.
 Sets practical and secure sshd defaults:
 
-- Disables root login
+- Disables root login.
 - Disables password login.
 - Enables agent forwarding.
+
+
+### cafe-core::sudo
+
+Creates and configures the `sysadmin` group for passwordless sudo.
+Enables sudo configuration through `sudoers.d`.
 
 
 ## Development and Testing

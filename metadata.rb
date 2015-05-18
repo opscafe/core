@@ -13,6 +13,8 @@ depends 'apt', '~> 2.7.0'
 depends 'logrotate', '~> 1.9.1'
 depends 'ntp', '~> 1.8.6'
 depends 'openssh', '~> 1.4.0'
+depends 'sudo', '~> 2.7.1'
+depends 'users', '~> 1.8.2'
 depends 'zsh', '~> 1.0.1'
 depends 'vim', '~> 1.1.2'
 
