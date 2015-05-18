@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'cafe-core::common' do
   let(:chef_run) { ChefSpec::ServerRunner.new.converge(described_recipe) }
 
+  it 'marks the common recipe as active' do
+    expect(chef_run.node['cafe']['core']['common']['active']).to be true
+  end
+
   cookbooks = %w(logrotate ntp zsh vim)
 
   cookbooks.each do |cookbook|

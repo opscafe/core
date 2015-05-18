@@ -29,6 +29,8 @@ Also includes the `apt::default` recipe on Debian based platforms.
 #>
 =end
 
+node.set['cafe']['core']['common']['active'] = true
+
 include_recipe 'apt::default' if platform_family? 'debian'
 include_recipe 'logrotate::default'
 include_recipe 'ntp::default'
