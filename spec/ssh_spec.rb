@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'cafe-core::ssh' do
   let(:chef_run) { ChefSpec::ServerRunner.new.converge(described_recipe) }
 
-  it 'marks the ssh server as active' do
+  it 'marks the ssh recipe as active' do
     expect(chef_run.node['cafe']['core']['ssh']['active']).to be true
   end
 
