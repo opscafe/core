@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'cafe-core::default' do
   let(:chef_run) { ChefSpec::ServerRunner.new.converge(described_recipe) }
 
+  before(:each) do
+    stub_command('which sudo')
+  end
+
   recipes = %w(common ssh sudo)
 
   it 'does not configure firewall' do
