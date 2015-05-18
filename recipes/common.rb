@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: cafe-core
-# Attributes:: default
+# Recipe:: common
 #
 # Copyright 2015 Evan Sosenko
 #
@@ -16,8 +16,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-# Enable individual recipe inclusion in the default recipe.
-%w(common ssh sudo).each do |recipe|
-  default['cafe']['core'][recipe]['enable'] = true
-end

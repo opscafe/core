@@ -24,9 +24,30 @@ or integrate seamlessly with other `cafe-*` cookbooks.
 
 * Ubuntu (~> 14.04)
 
+## Attributes
+
+Attribute | Description | Default | Choices
+----------|-------------|---------|--------
+`node['cafe']['core']['common']['enable']` | `Include the common recipe by default.` | true |
+`node['cafe']['core']['ssh']['enable']` | `Include the ssh recipe by default.` | true |
+`node['cafe']['core']['sudo']['enable']` | `Include the sudo recipe by default.` | true |
+
 ## Recipes
 
-* cafe-core::default - Installs and configures core services.
+* [cafe-core::default](#cafe-coredefault) - Installs and configures core services.
+* cafe-core::common - Configures smart defaults.
+* cafe-core::ssh - Configures an ssh server.
+* cafe-core::sudo - Configures and enables sudo.
+
+### cafe-core::default
+
+Includes each other `recipe` in this cookbook according to
+the corresponding attribute:
+
+```
+node['cafe']['core'][recipe]['enable']
+```
+
 
 ## Development and Testing
 
