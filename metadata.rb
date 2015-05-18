@@ -9,6 +9,8 @@ version          '0.0.0'
 
 supports 'ubuntu', '~> 14.04'
 
+depends 'openssh', '~> 1.4.0'
+
 recipe 'cafe-core::default', 'Installs and configures core services.'
 recipe 'cafe-core::common', 'Configures smart defaults.'
 recipe 'cafe-core::ssh', 'Configures an ssh server.'

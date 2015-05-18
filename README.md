@@ -24,6 +24,10 @@ or integrate seamlessly with other `cafe-*` cookbooks.
 
 * Ubuntu (~> 14.04)
 
+### Cookbooks:
+
+* openssh (~> 1.4.0)
+
 ## Attributes
 
 Attribute | Description | Default | Choices
@@ -36,7 +40,7 @@ Attribute | Description | Default | Choices
 
 * [cafe-core::default](#cafe-coredefault) - Installs and configures core services.
 * cafe-core::common - Configures smart defaults.
-* cafe-core::ssh - Configures an ssh server.
+* [cafe-core::ssh](#cafe-coressh) - Configures an ssh server.
 * cafe-core::sudo - Configures and enables sudo.
 
 ### cafe-core::default
@@ -47,6 +51,16 @@ the corresponding attribute:
 ```
 node['cafe']['core'][recipe]['enable']
 ```
+
+
+### cafe-core::ssh
+
+Installs and enables the openssh server.
+Sets practical and secure sshd defaults:
+
+- Disables root login
+- Disables password login.
+- Enables agent forwarding.
 
 
 ## Development and Testing

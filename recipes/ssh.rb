@@ -16,3 +16,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+=begin
+#<
+Installs and enables the openssh server.
+Sets practical and secure sshd defaults:
+
+- Disables root login
+- Disables password login.
+- Enables agent forwarding.
+#>
+=end
+
+node.set['cafe']['core']['ssh']['active'] = true
+
+node.default['openssh']['server']['password_authentication'] = 'no'
+node.default['openssh']['server']['challenge_response_authentication'] = 'no'
+node.default['openssh']['server']['permit_root_login'] = 'no'
+node.default['openssh']['server']['t_c_p_keep_alive'] = 'yes'
+node.default['openssh']['server']['allow_agent_forwarding'] = 'yes'
+
+include_recipe 'openssh::default'
