@@ -19,5 +19,6 @@
 
 # Enable individual recipe inclusion in the default recipe.
 %w(common ssh sudo).each do |recipe|
+  default['cafe']['core'][recipe]['active'] = false
   default['cafe']['core'][recipe]['enable'] = true
 end
