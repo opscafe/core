@@ -9,7 +9,12 @@ version          '0.0.0'
 
 supports 'ubuntu', '~> 14.04'
 
+depends 'apt', '~> 2.7.0'
+depends 'logrotate', '~> 1.9.1'
+depends 'ntp', '~> 1.8.6'
 depends 'openssh', '~> 1.4.0'
+depends 'zsh', '~> 1.0.1'
+depends 'vim', '~> 1.1.2'
 
 recipe 'cafe-core::default', 'Installs and configures core services.'
 recipe 'cafe-core::common', 'Configures smart defaults.'

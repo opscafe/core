@@ -26,7 +26,12 @@ or integrate seamlessly with other `cafe-*` cookbooks.
 
 ### Cookbooks:
 
+* apt (~> 2.7.0)
+* logrotate (~> 1.9.1)
+* ntp (~> 1.8.6)
 * openssh (~> 1.4.0)
+* zsh (~> 1.0.1)
+* vim (~> 1.1.2)
 
 ## Attributes
 
@@ -39,7 +44,7 @@ Attribute | Description | Default | Choices
 ## Recipes
 
 * [cafe-core::default](#cafe-coredefault) - Installs and configures core services.
-* cafe-core::common - Configures smart defaults.
+* [cafe-core::common](#cafe-corecommon) - Configures smart defaults.
 * [cafe-core::ssh](#cafe-coressh) - Configures an ssh server.
 * cafe-core::sudo - Configures and enables sudo.
 
@@ -51,6 +56,18 @@ the corresponding attribute:
 ```
 node['cafe']['core'][recipe]['enable']
 ```
+
+
+### cafe-core::common
+
+Includes a set of practical cookbooks to setup the following:
+
+- logrotate
+- Network Time Protocol (NTP)
+- Zsh
+- Vim
+
+Also includes the `apt::default` recipe on Debian based platforms.
 
 
 ### cafe-core::ssh

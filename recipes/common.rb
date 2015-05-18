@@ -16,3 +16,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+=begin
+#<
+Includes a set of practical cookbooks to setup the following:
+
+- logrotate
+- Network Time Protocol (NTP)
+- Zsh
+- Vim
+
+Also includes the `apt::default` recipe on Debian based platforms.
+#>
+=end
+
+include_recipe 'apt::default' if platform_family? 'debian'
+include_recipe 'logrotate::default'
+include_recipe 'ntp::default'
+include_recipe 'zsh::default'
+include_recipe 'vim::default'
