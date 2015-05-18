@@ -21,7 +21,7 @@
 Installs and enables the openssh server.
 Sets practical and secure sshd defaults:
 
-- Disables root login
+- Disables root login.
 - Disables password login.
 - Enables agent forwarding.
 #>
