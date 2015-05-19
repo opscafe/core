@@ -18,8 +18,13 @@
 #
 =begin
 #<
-Creates and configures the `sysadmin` group for passwordless sudo.
 Enables sudo configuration through `sudoers.d`.
+
+Creates and configures the `sysadmin` group for passwordless sudo.
+The `sysadmin` group is created only if the `uses` data bag exists
+and contains at least one sysadmin user.
+For example, see
+[sudoroot.json](./test/integration/sudo/data_bags/users/sudoroot.json).
 #>
 =end
 
@@ -31,4 +36,16 @@ node.default['authorization']['sudo']['passwordless'] = true
 node.default['authorization']['sudo']['include_sudoers_d'] = true
 
 include_recipe 'sudo::default'
-include_recipe 'users::sysadmins'
+
+begin
+  message = "The 'users' data bag does not exist: " \
+            'the sysadmin group will not be created.'
+  data_bag 'users'
+rescue Chef::Exceptions::InvalidDataBagPath
+  Chef::Log.warn message
+rescue Net::HTTPServerException => e
+  raise e unless e.response.code == '404'
+  Chef::Log.warn message
+else
+  include_recipe 'users::sysadmins'
+end

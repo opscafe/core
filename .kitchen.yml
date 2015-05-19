@@ -19,3 +19,7 @@ suites:
   - name: default
     run_list:
       - recipe[cafe-core::default]
+
+  - name: sudo
+    run_list:
+      - recipe[cafe-core::sudo]
