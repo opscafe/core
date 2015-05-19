@@ -84,8 +84,13 @@ Sets practical and secure sshd defaults:
 
 ### cafe-core::sudo
 
-Creates and configures the `sysadmin` group for passwordless sudo.
 Enables sudo configuration through `sudoers.d`.
+
+Creates and configures the `sysadmin` group for passwordless sudo.
+The `sysadmin` group is created only if the `uses` data bag exists
+and contains at least one sysadmin user.
+For example, see
+[sudoroot.json](./test/integration/sudo/data_bags/users/sudoroot.json).
 
 
 ## Development and Testing
