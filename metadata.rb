@@ -5,7 +5,7 @@ license          'Apache 2.0'
 description      'OpsCafe common core infrastructure.'
 source_url       'https://github.com/opscafe/core'
 issues_url       'https://github.com/opscafe/core/issues'
-version          '0.0.0'
+version          '0.0.1'
 
 supports 'ubuntu', '~> 14.04'
 
