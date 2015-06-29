@@ -31,6 +31,10 @@ Also includes the `apt::default` recipe on Debian based platforms.
 
 node.set['cafe']['core']['common']['active'] = true
 
+if platform_family? 'freebsd'
+  node.default['ntp']['var_owner'] = 'root'
+end
+
 include_recipe 'apt::default' if platform_family? 'debian'
 include_recipe 'logrotate::default' if platform_family? 'debian'
 include_recipe 'ntp::default'
