@@ -25,9 +25,5 @@ describe 'cafe-core::common' do
     it 'includes the apt::default recipe' do
       expect(chef_run).to include_recipe('apt::default')
     end
-
-    it 'includes the logrotate::default recipe' do
-      expect(chef_run).to include_recipe('logrotate::default')
-    end
   end
 end

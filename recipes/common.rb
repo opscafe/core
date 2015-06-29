@@ -20,7 +20,6 @@
 #<
 Includes a set of practical cookbooks to setup the following:
 
-- logrotate
 - Network Time Protocol (NTP)
 - Zsh
 - Vim
@@ -32,7 +31,6 @@ Also includes the `apt::default` recipe on Debian based platforms.
 node.set['cafe']['core']['common']['active'] = true
 
 include_recipe 'apt::default' if platform_family? 'debian'
-include_recipe 'logrotate::default' if platform_family? 'debian'
 include_recipe 'ntp::default'
 include_recipe 'zsh::default'
 include_recipe 'vim::default'

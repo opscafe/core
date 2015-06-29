@@ -10,7 +10,6 @@ version          '0.0.0'
 supports 'ubuntu', '~> 14.04'
 
 depends 'apt', '~> 2.7.0'
-depends 'logrotate', '~> 1.9.1'
 depends 'ntp', '~> 1.8.6'
 depends 'openssh', '~> 1.5.0'
 depends 'sudo', '~> 2.7.1'

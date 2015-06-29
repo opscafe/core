@@ -27,9 +27,8 @@ or integrate seamlessly with other `cafe-*` cookbooks.
 ### Cookbooks:
 
 * apt (~> 2.7.0)
-* logrotate (~> 1.9.1)
 * ntp (~> 1.8.6)
-* openssh (~> 1.4.0)
+* openssh (~> 1.5.0)
 * sudo (~> 2.7.1)
 * users (~> 1.8.2)
 * zsh (~> 1.0.1)
@@ -64,7 +63,6 @@ node['cafe']['core'][recipe]['enable']
 
 Includes a set of practical cookbooks to setup the following:
 
-- logrotate
 - Network Time Protocol (NTP)
 - Zsh
 - Vim
