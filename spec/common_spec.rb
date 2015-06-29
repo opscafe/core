@@ -7,7 +7,7 @@ describe 'cafe-core::common' do
     expect(chef_run.node['cafe']['core']['common']['active']).to be true
   end
 
-  cookbooks = %w(logrotate ntp zsh vim)
+  cookbooks = %w(ntp zsh vim)
 
   cookbooks.each do |cookbook|
     it "includes the #{cookbook}::default recipe" do
@@ -24,6 +24,10 @@ describe 'cafe-core::common' do
 
     it 'includes the apt::default recipe' do
       expect(chef_run).to include_recipe('apt::default')
+    end
+
+    it 'includes the logrotate::default recipe' do
+      expect(chef_run).to include_recipe('logrotate::default')
     end
   end
 end
