@@ -1,5 +1,9 @@
 # ChangeLog
 
+## HEAD
+
+- Update minor dependency versions.
+
 ## 0.0.2
 
 - Update Berkshelf to 3.3.0.
