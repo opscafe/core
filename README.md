@@ -22,7 +22,7 @@ or integrate seamlessly with other `cafe-*` cookbooks.
 
 ### Platforms
 
-* Ubuntu (~> 14.04)
+* ubuntu (~> 14.04)
 
 ### Cookbooks:
 
