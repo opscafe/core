@@ -26,7 +26,7 @@ or integrate seamlessly with other `cafe-*` cookbooks.
 
 ### Cookbooks:
 
-* apt (~> 2.7.0)
+* apt (~> 2.8.2)
 * ntp (~> 1.8.6)
 * openssh (~> 1.5.0)
 * sudo (~> 2.7.1)
